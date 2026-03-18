@@ -1,0 +1,67 @@
+.factura-detalle-page {
+  padding: 1.5rem;
+}
+
+.factura-detalle-page h2 {
+  margin-bottom: 0.5rem;
+}
+
+.detalle-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  margin-top: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+}
+
+.detalle-table th,
+.detalle-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.btn-volver {
+  margin-top: 1.5rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-volver:hover {
+  background: #2563eb;
+}
+
+.filtros-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Cada filtro es un bloque vertical */
+.filtro-item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Texto de la etiqueta */
+.filtro-item label {
+  font-size: 0.85rem;
+  color: #475569;
+  margin-bottom: 0.25rem;
+}
+
+/* Aquí igualamos TODOS los inputs y selects */
+.filtro-item input,
+.filtro-item select {
+  width: 180px; /* Ajusta este valor si quieres */
+  padding: 0.5rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
