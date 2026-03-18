@@ -11,6 +11,10 @@
   color: #1e293b;
 }
 
+/* ============================
+   TABLA
+============================ */
+
 .facturas-table {
   width: 100%;
   border-collapse: collapse;
@@ -47,23 +51,42 @@
   background: #2563eb;
 }
 
+/* ============================
+   FILTROS
+============================ */
+
 .filtros-container {
   display: flex;
   gap: 1rem;
   margin-bottom: 1rem;
+  flex-wrap: wrap; /* Pantallas pequeñas */
 }
 
-.filtros-container input,
-.filtros-container select {
+.filtro-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.filtro-item label {
+  font-size: 0.85rem;
+  color: #475569;
+  margin-bottom: 0.25rem;
+}
+
+.filtro-item input,
+.filtro-item select,
+.filtro-item button {
+  width: 100%;
+  min-width: 140px;
+  max-width: 180px;
   padding: 0.5rem;
   border: 1px solid #cbd5e1;
   border-radius: 6px;
-  font-size: 0.9rem;
+  box-sizing: border-box;
 }
 
+/* Botón limpiar */
 .btn-limpiar {
-  width: 180px;
-  padding: 0.5rem;
   background: #ef4444;
   color: white;
   border: none;
@@ -75,4 +98,36 @@
 
 .btn-limpiar:hover {
   background: #dc2626;
+}
+
+/* ============================
+   RESPONSIVE PANTALLAS GRANDES
+============================ */
+
+@media (min-width: 1200px) {
+  .filtros-container {
+    flex-wrap: nowrap; /* 🔥 Fuerza una sola línea */
+  }
+
+  .filtro-item {
+    flex: 0 0 auto; /* 🔥 Evita que se estiren */
+  }
+
+  .filtro-item input,
+  .filtro-item select,
+  .filtro-item button {
+    max-width: 160px; /* 🔥 Ajuste final para que entren todos */
+  }
+}
+
+/* ============================
+   TABLA RESPONSIVE
+============================ */
+
+.facturas-table-container {
+  overflow-x: auto;
+}
+
+.facturas-table {
+  min-width: 600px;
 }

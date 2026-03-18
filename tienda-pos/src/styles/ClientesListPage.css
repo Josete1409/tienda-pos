@@ -1,0 +1,177 @@
+.clientes-page {
+  padding: 1.5rem;
+}
+
+.clientes-header {
+  margin-bottom: 1rem;
+}
+
+.clientes-header h2 {
+  margin: 0;
+  color: #1e293b;
+}
+
+/* ============================
+   FILTROS
+============================ */
+
+.filtros-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap; /* Pantallas pequeñas */
+}
+
+.filtro-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.filtro-item label {
+  font-size: 0.85rem;
+  color: #475569;
+  margin-bottom: 0.25rem;
+}
+
+.filtro-item input,
+.filtro-item select,
+.filtro-item button {
+  width: 100%;
+  min-width: 140px;
+  max-width: 180px;
+  padding: 0.5rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* Botón limpiar */
+.btn-limpiar {
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.btn-limpiar:hover {
+  background: #dc2626;
+}
+
+/* Botón nuevo cliente */
+.btn-nuevo {
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.btn-nuevo:hover {
+  background: #059669;
+}
+
+/* ============================
+   RESPONSIVE PANTALLAS GRANDES
+============================ */
+
+@media (min-width: 1200px) {
+  .filtros-container {
+    flex-wrap: nowrap; /* Fuerza una sola línea */
+  }
+
+  .filtro-item {
+    flex: 0 0 auto; /* Evita que se estiren */
+  }
+
+  .filtro-item input,
+  .filtro-item select,
+  .filtro-item button {
+    max-width: 160px; /* Ajuste final */
+  }
+}
+
+/* ============================
+   TABLA
+============================ */
+
+.clientes-table-container {
+  overflow-x: auto;
+}
+
+.clientes-table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+}
+
+.clientes-table th,
+.clientes-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: left;
+}
+
+/* Evita que los botones se rompan en varias líneas */
+.clientes-table td {
+  white-space: nowrap;
+}
+
+.clientes-table th {
+  background: #f8fafc;
+  color: #475569;
+}
+
+/* ============================
+   BOTONES DE ACCIÓN
+============================ */
+
+.btn-accion,
+.btn-eliminar,
+.btn-detalle {
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin-right: 0.4rem; /* Separación entre botones */
+  display: inline-block;
+}
+
+/* Botón Editar */
+.btn-accion {
+  background: #3b82f6;
+  color: white;
+}
+
+.btn-accion:hover {
+  background: #2563eb;
+}
+
+/* Botón Eliminar */
+.btn-eliminar {
+  background: #ef4444;
+  color: white;
+}
+
+.btn-eliminar:hover {
+  background: #dc2626;
+}
+
+/* Botón Ver detalle */
+.btn-detalle {
+  background: #0ea5e9;
+  color: white;
+}
+
+.btn-detalle:hover {
+  background: #0284c7;
+}

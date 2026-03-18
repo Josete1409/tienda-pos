@@ -1,11 +1,12 @@
 .app-layout {
-  display: flex;              /* Sidebar + contenido en horizontal */
-  height: 100vh;              /* Ocupa toda la pantalla */
+  display: flex;
+  width: 100%;
+  height: 100vh;
 }
 
 .content {
-  flex: 1;                    /* Ocupa todo el espacio restante */
+  flex: 1;
+  width: 100%;
   display: flex;
-  flex-direction: column;     /* Navbar arriba, contenido debajo */
-  overflow: hidden;
+  flex-direction: column;
 }

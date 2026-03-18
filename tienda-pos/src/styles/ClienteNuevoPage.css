@@ -1,0 +1,103 @@
+.cliente-nuevo-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;   /* Centra horizontalmente */
+  padding: 2rem 1rem;
+}
+
+.cliente-form-container {
+  width: 100%;
+  max-width: 500px;          /* Tamaño ideal */
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.08);
+}
+
+.cliente-form-container h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+  text-align: center;
+}
+
+/* ============================
+   FORMULARIO
+============================ */
+
+.cliente-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  color: #475569;
+  margin-bottom: 0.3rem;
+}
+
+.form-group input {
+  padding: 0.55rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+/* Checkbox */
+.form-group-check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-group-check label {
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+/* ============================
+   BOTONES
+============================ */
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.btn-guardar {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+
+.btn-guardar:hover {
+  background: #2563eb;
+}
+
+.btn-cancelar {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+
+.btn-cancelar:hover {
+  background: #dc2626;
+}

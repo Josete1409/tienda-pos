@@ -69,16 +69,12 @@ export const FacturasListPage = () => {
       coincideFechaHasta
     );
   });
+  
   return (
     <div className="facturas-page">
       <div className="facturas-header">
         <h2>Listado de Facturas</h2>
         <div className="filtros-container">
-          <div className="filtro-item">
-            <button className="btn-limpiar" onClick={handleLimpiarFiltros}>
-              Limpiar
-            </button>
-          </div>
 
           <div className="filtro-item">
             <label>Buscar:</label>
@@ -119,41 +115,51 @@ export const FacturasListPage = () => {
               onChange={(e) => setFechaHasta(e.target.value)}
             />
           </div>
+
+          <div className="filtro-item">
+            <label>Borrar Filtros</label>
+            <button className="btn-limpiar" onClick={handleLimpiarFiltros}>
+              Limpiar
+            </button>
+          </div>
+
         </div>
       </div>
 
-      <table className="facturas-table">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Cliente</th>
-            <th>Fecha</th>
-            <th>Total (€)</th>
-            <th>Estado</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          {facturasFiltradas.map((f) => (
-            <tr key={f.id}>
-              <td>{f.id}</td>
-              <td>{f.cliente}</td>
-              <td>{f.fecha}</td>
-              <td>{f.total.toFixed(2)}</td>
-              <td>{f.estado}</td>
-              <td>
-                <button
-                  className="btn-accion"
-                  onClick={() => navigate(`/facturas/${f.id}`)}
-                >
-                  Ver detalle
-                </button>
-              </td>
+      <div className="facturas-table-container">
+        <table className="facturas-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Cliente</th>
+              <th>Fecha</th>
+              <th>Total (€)</th>
+              <th>Estado</th>
+              <th>Acciones</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+
+          <tbody>
+            {facturasFiltradas.map((f) => (
+              <tr key={f.id}>
+                <td>{f.id}</td>
+                <td>{f.cliente}</td>
+                <td>{f.fecha}</td>
+                <td>{f.total.toFixed(2)}</td>
+                <td>{f.estado}</td>
+                <td>
+                  <button
+                    className="btn-accion"
+                    onClick={() => navigate(`/facturas/${f.id}`)}
+                  >
+                    Ver detalle
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
