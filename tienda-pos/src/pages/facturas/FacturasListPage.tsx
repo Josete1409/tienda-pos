@@ -41,6 +41,13 @@ export const FacturasListPage = () => {
   const [fechaDesde, setFechaDesde] = useState("");
   const [fechaHasta, setFechaHasta] = useState("");
 
+  const handleLimpiarFiltros = () => {
+    setBusqueda("");
+    setEstadoFiltro("todos");
+    setFechaDesde("");
+    setFechaHasta("");
+  };
+
   const facturasFiltradas = facturasMock.filter((f) => {
     const coincideBusqueda = f.cliente
       .toLowerCase()
@@ -67,6 +74,12 @@ export const FacturasListPage = () => {
       <div className="facturas-header">
         <h2>Listado de Facturas</h2>
         <div className="filtros-container">
+          <div className="filtro-item">
+            <button className="btn-limpiar" onClick={handleLimpiarFiltros}>
+              Limpiar
+            </button>
+          </div>
+
           <div className="filtro-item">
             <label>Buscar:</label>
             <input

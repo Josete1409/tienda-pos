@@ -60,3 +60,19 @@
   border-radius: 6px;
   font-size: 0.9rem;
 }
+
+.btn-limpiar {
+  width: 180px;
+  padding: 0.5rem;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.btn-limpiar:hover {
+  background: #dc2626;
+}
